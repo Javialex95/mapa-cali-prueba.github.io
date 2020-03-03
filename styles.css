@@ -1,0 +1,42 @@
+#mapid {
+height: 50vw;
+width: 100vw;
+z-index: 10;
+text-align: right;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu{
+    display: flex;
+
+}
+
+.menu p{
+    margin: 0px 50px;
+}
+#section{
+    width: 0;
+}
+
+.contenido{
+    width: 50%;
+    height: 100%;
+    background: black;
+    color: white;
+    position: absolute;
+    top: 56px;
+    z-index: 20;
+}
+
+.lugaresFlex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.lugaresFlex div{
+    margin: 10px 10px;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Mapa</title>
+
+    <!-- Estilos Mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <!-- CSS  -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Jquery -->
+    <script src="jquery-3.4.1.min.js"></script>
+    <!-- Jquery UI -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+
+
+<body>
+    <header>
+        <div class="contenedor">
+            <div>
+                <img onclick="menuOpen()" src="img/menu-hamburgesa.png" alt="">
+            </div>
+            <div>
+                <img width="100px" src="img/logo-casa-de-la-memoria.png">
+            </div>
+        </div>
+    </header>
+
+    <div>
+        <div>
+            <div id="mapid"></div>
+        </div>
+    </div>
+
+    <section id="section" style="display: none;">
+        <div class="slides contenido">
+            <div class="menu">
+                <p onclick="menu(1)">INTRO</p>
+                <p onclick="menu(2)">LUGARES</p>
+                <p onclick="menu(3)">GESTORES</p>
+            </div>
+            <p>En este mapa interactivo puedes consultar información
+                específica de algunos lugares y gestores de memoria que
+                existen en Santiago de Cali. Esta Ruta de la Memoria nos
+                acerca a los repertorios utilizados por diversos actores
+                para reconocer lo ocurrido durante el conflicto armado,
+                dignificar la memoria de las víctimas y sobrevivientes y
+                contribuir a la transformación positiva de nuestros
+
+                conflictos sociales.
+
+                ¡Te invitamos a conocerles y visitarles!</p>
+        </div>
+
+        <div class="slides contenido">
+            <div class="menu">
+                <p onclick="menu(1)">INTRO</p>
+                <p onclick="menu(2)">LUGARES</p>
+                <p onclick="menu(3)">GESTORES</p>
+            </div>
+            <div class="lugaresFlex">
+                <div>
+                    <p>Son espacios físicos de reconocimiento
+                        público, lugares testimoniales donde
+                        ocurrieron hechos del conflicto armado o
+                        lugares representativos en los que se
+                        resignifican espacios simbólicos para su
+                        conmemoración. A su vez, estos pueden ser
+                        espacios ecológicos o naturales (árboles,
+                        bosques, jardines, ríos), edificaciones para la
+                        memoria (galerías, casas, centros culturales,
+                        museos de la memoria, sitios de conciencia o
+                        espacios de recordación), marcaciones
+                        territoriales (placas, monumentos, calles,
+                        murales) o circuitos de la memoria (paseos
+                        peatonales, recorridos o parques
+                        conmemorativos).</p>
+                        <p>Definición del Sistema Nacional de Atención y
+                            Reparación Integral a las Víctimas.
+                            Guía de lineamientos sobre la creación y
+                            apropiación social de lugares de memoria.
+                            Bogotá, UARIV, 2015.</p>
+                </div>
+                <div>
+                    <div onclick="openEdificaciones()">edificaciones de memoria (darle click)</div>
+                    <div id="edificaciones" style="display: none;">
+                        3. Museo Popular de Siloé <br>
+                        4. Edificio San Luis, Asamblea Departamental 
+                        del Valle del Cauca <br>
+                        5. Monumento en Honor a la Vida Monseñor 
+                        Isaías Duarte Cancino - <br>
+                        6. A los Estudiantes Caídos en la Dictadura de 
+                        Rojas Pinilla <br>
+                        7. Obelisco de los periodistas <br>
+                        8. A Jhonny Silva Aranguren <br>
+                        9. A Camilo Torres Restrepo <br>
+                        10. A los Diputados Asesinados en Cautiverio <br>
+                        11. Placa Conmemorativa Víctimas 
+                        pertenecientes al Poder Judicial Regional Sur - 
+                        Palacio de Justicia. <br>
+                        12. A Jorge Eliécer Gaitán <br>
+                        13. A Luis Carlos Galán Sarmiento 6 y 8 entre
+                        calles 9 y 10. Cali, Valle del Cauca</div>
+                    <div>marcaciones territoriales</div>
+                    <div>Lugares representativos</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slides contenido">
+            <div class="menu">
+                <p onclick="menu(1)">INTRO</p>
+                <p onclick="menu(2)">LUGARES</p>
+                <p onclick="menu(3)">GESTORES</p>
+            </div>
+            <p>AQUI VAN LOS GESTORES</p>
+        </div>
+    </section>
+
+
+    <!-- Mapa JS -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+    <!-- JS -->
+    <script src="main.js"></script>
+</body>
+
+</html>
