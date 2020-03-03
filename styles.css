@@ -33,10 +33,17 @@ text-align: right;
 }
 
 .lugaresFlex{
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    
 }
 
 .lugaresFlex div{
+    width: 50%;
     margin: 10px 10px;
+}
+
+.mapaVerde{
+    background: green;
 }
