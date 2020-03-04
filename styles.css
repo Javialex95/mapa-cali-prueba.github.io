@@ -1,8 +1,7 @@
-#mapid {
-height: 50vw;
-width: 100vw;
-z-index: 10;
-text-align: right;
+
+/* MENU */
+.menu{
+    display: flex;
 }
 
 .contenedor{
@@ -10,21 +9,19 @@ text-align: right;
     justify-content: space-between;
 }
 
-.menu{
-    display: flex;
-
-}
-
 .menu p{
     margin: 0px 50px;
 }
+
+/* Contenido */
 #section{
     width: 0;
 }
 
+/* MODAL */
 .contenido{
-    width: 50%;
-    height: 100%;
+    width: 37.5%;
+    height: 50%;
     background: black;
     color: white;
     position: absolute;
@@ -32,18 +29,65 @@ text-align: right;
     z-index: 20;
 }
 
-.lugaresFlex{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    
+/* Seccion lugares */
+.lugares{
+    font-size: 10px;
 }
-
-.lugaresFlex div{
+.lugares-01{
     width: 50%;
-    margin: 10px 10px;
+    float: left;
 }
 
-.mapaVerde{
+.lugares-02{
+    width: 50%;
+    float: right;
+}
+
+
+/* Tamaño del mapa */
+#mapid {
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    text-align: right;
+    }
+
+/* Ventana de información mapa */
+.gm-style-iw {
+    background: green !important;
+}
+.gm-style-iw-d{
+    overflow: visible !important;
     background: green;
+    padding-right: 25px;
+}
+
+
+/* MAPA Modals */
+.mapaModal{
+    width: 1200px;
+    height: 600px;
+    position: absolute;
+    top: 120px;
+    left: 100px;
+    z-index: 100 !important;
+}
+
+.verde{
+    float: left;
+    width: 50%;
+    height: inherit;
+    background: green;
+}
+
+.sliderModal{
+    float: right;
+    width: 50%;
+    height: inherit;
+    background: black;
+}
+
+.cerrar{
+    position: absolute;
+    right: 0;
 }

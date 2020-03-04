@@ -22,12 +22,10 @@
 
 
 
-<body>
+<body id="bodyContenedor">
     <header>
         <div class="contenedor">
-            <div>
-                <img onclick="menuOpen()" src="img/menu-hamburgesa.png" alt="">
-            </div>
+            <div></div>
             <div>
                 <img width="100px" src="img/logo-casa-de-la-memoria.png">
             </div>
@@ -40,14 +38,15 @@
         </div>
     </div>
 
-    <section id="section" style="display: none;">
+    <section id="section">
         <div class="slides contenido">
             <div class="menu">
+                <img onclick="menuOpen()" src="img/menu-hamburgesa.png" alt="">
                 <p onclick="menu(1)">INTRO</p>
                 <p onclick="menu(2)">LUGARES</p>
                 <p onclick="menu(3)">GESTORES</p>
             </div>
-            <p>En este mapa interactivo puedes consultar información
+            <p class="menuContenido"  style="display: none;">En este mapa interactivo puedes consultar información
                 específica de algunos lugares y gestores de memoria que
                 existen en Santiago de Cali. Esta Ruta de la Memoria nos
                 acerca a los repertorios utilizados por diversos actores
@@ -62,13 +61,14 @@
 
         <div class="slides contenido">
             <div class="menu">
+                <img onclick="menuOpen2()" src="img/menu-hamburgesa.png" alt="">
                 <p onclick="menu(1)">INTRO</p>
                 <p onclick="menu(2)">LUGARES</p>
                 <p onclick="menu(3)">GESTORES</p>
             </div>
             
-            <div class="lugaresFlex">
-                <div>
+            <div class="lugares menuContenido2"  style="display: none;">
+                <div class="lugares-01">
                     <p>Son espacios físicos de reconocimiento
                         público, lugares testimoniales donde
                         ocurrieron hechos del conflicto armado o
@@ -90,7 +90,7 @@
                             apropiación social de lugares de memoria.
                             Bogotá, UARIV, 2015.</p>
                 </div>
-                <div>
+                <div class="lugares-02">
                     <div onclick="openEdificaciones()">edificaciones de memoria (darle click)</div>
                     <div id="edificaciones" style="display: none;">
                         3. Museo Popular de Siloé <br>
@@ -118,13 +118,27 @@
 
         <div class="slides contenido">
             <div class="menu">
+                <img onclick="menuOpen3()" src="img/menu-hamburgesa.png" alt="">
                 <p onclick="menu(1)">INTRO</p>
                 <p onclick="menu(2)">LUGARES</p>
                 <p onclick="menu(3)">GESTORES</p>
             </div>
-            <p>AQUI VAN LOS GESTORES</p>
+            <p class="menuContenido3" style="display: none;">
+                AQUI VAN LOS GESTORES
+            </p>
         </div>
     </section>
+
+    <!-- Modal para mapa -->
+
+    <div id="mapaModal" class="mapaModal" style="display: none;">
+        <div class="verde">
+            
+        </div>
+        <div class="sliderModal">
+            <img onclick="openModalMapa()" class="cerrar" src="img/cerrar-naranja.png" alt="">
+        </div>
+    </div>
 
 
    <!-- Google Maps -->
